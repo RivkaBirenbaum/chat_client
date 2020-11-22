@@ -1,0 +1,10 @@
+<div style="justify-content:center;display: flex;">
+  <form style="width: 40%;" method="post">
+    <div class="container">
+      <label for="uname"><b>nickname</b></label>
+      <input [formControl]="nickName" type="text" placeholder="Enter nickName" required>
+      <button type="submit" (click)="signin()">sign-in</button>
+      <label style="color:red" *ngIf="error==true" for="uname"><b>nickName already exist!</b></label>
+    </div>
+  </form>
+</div>

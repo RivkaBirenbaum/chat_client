@@ -1,0 +1,9 @@
+<div>
+  <div *ngFor="let item of messageList">
+    <p> [{{item.date  | date:'mm:ss'}}] <{{item.user}}> {{item.message}} </p>
+  </div>
+</div>
+<div>
+  <input [formControl]="message" type="text" placeholder="Enter your message" required>
+  <button type="submit" (click)="sendMessage()">send</button>
+</div>
